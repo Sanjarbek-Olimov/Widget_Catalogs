@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mywidgecatalog_less6/pages/dialog_page.dart';
 import 'package:mywidgecatalog_less6/pages/home_page.dart';
+import 'package:mywidgecatalog_less6/pages/list_view_page.dart';
+import 'package:mywidgecatalog_less6/pages/single_child_scroll_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.id: (context) =>HomePage(),
         DialogPage.id: (context) =>DialogPage(),
+        SingleChildScrollPage.id: (context) => SingleChildScrollPage(),
+        ListViewPage.id: (context) => ListViewPage()
       },
     );
   }

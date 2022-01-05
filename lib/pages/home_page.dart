@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mywidgecatalog_less6/pages/dialog_page.dart';
+import 'package:mywidgecatalog_less6/pages/list_view_page.dart';
+import 'package:mywidgecatalog_less6/pages/single_child_scroll_page.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "home_page";
@@ -27,17 +29,48 @@ class _HomePageState extends State<HomePage> {
             MaterialButton(
               shape: const StadiumBorder(),
               height: 50,
-              minWidth: 200,
+              minWidth: 250,
               onPressed: () {
                 Navigator.of(context).pushNamed(DialogPage.id);
               },
               child: const Text(
-                "Dialog",
+                "Dialog and Drawer",
                 style: TextStyle(fontSize: 20),
               ),
               textColor: Colors.white,
               color: Colors.blueAccent,
-            )
+            ),
+            SizedBox(height: 20,),
+            MaterialButton(
+              shape: const StadiumBorder(),
+              height: 50,
+              minWidth: 250,
+              onPressed: () {
+                Navigator.of(context).pushNamed(SingleChildScrollPage.id);
+              },
+              child: const Text(
+                "SingleChildScrollView",
+                style: TextStyle(fontSize: 20),
+              ),
+              textColor: Colors.white,
+              color: Colors.blueAccent,
+            ),
+            SizedBox(height: 20,),
+            MaterialButton(
+              shape: const StadiumBorder(),
+              height: 50,
+              minWidth: 250,
+              onPressed: () {
+                Navigator.of(context).pushNamed(ListViewPage.id);
+              },
+              child: const Text(
+                "List View",
+                style: TextStyle(fontSize: 20),
+              ),
+              textColor: Colors.white,
+              color: Colors.blueAccent,
+            ),
+
           ],
         ),
       ),
