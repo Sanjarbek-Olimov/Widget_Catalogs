@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mywidgecatalog_less6/pages/dialog_page.dart';
-import 'package:mywidgecatalog_less6/pages/grid_view_page.dart';
-import 'package:mywidgecatalog_less6/pages/list_view_page.dart';
-import 'package:mywidgecatalog_less6/pages/single_child_scroll_page.dart';
 
 class PageViewPage extends StatefulWidget {
   static const String id = "page_view_page";

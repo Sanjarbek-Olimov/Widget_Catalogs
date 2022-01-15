@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mywidgecatalog_less6/pages/animations/animation_page.dart';
+import 'package:mywidgecatalog_less6/pages/buttons_page.dart';
+import 'package:mywidgecatalog_less6/pages/container_page.dart';
 import 'package:mywidgecatalog_less6/pages/dialog_page.dart';
+import 'package:mywidgecatalog_less6/pages/fancy_bottom_bar_page.dart';
+import 'package:mywidgecatalog_less6/pages/grid_view_page.dart';
+import 'package:mywidgecatalog_less6/pages/input_page.dart';
 import 'package:mywidgecatalog_less6/pages/list_view_page.dart';
+import 'package:mywidgecatalog_less6/pages/navigation_rail_page.dart';
+import 'package:mywidgecatalog_less6/pages/page_view_page.dart';
 import 'package:mywidgecatalog_less6/pages/single_child_scroll_page.dart';
+import 'package:mywidgecatalog_less6/pages/sliver_app_bar_page.dart';
+import 'package:mywidgecatalog_less6/pages/speed_dial_page.dart';
+import 'package:mywidgecatalog_less6/pages/tab_bar_view_page.dart';
+import 'package:mywidgecatalog_less6/pages/text_form_page.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "home_page";
@@ -22,56 +34,267 @@ class _HomePageState extends State<HomePage> {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // dialog page
-            MaterialButton(
-              shape: const StadiumBorder(),
-              height: 50,
-              minWidth: 250,
-              onPressed: () {
-                Navigator.of(context).pushNamed(DialogPage.id);
-              },
-              child: const Text(
-                "Dialog and Drawer",
-                style: TextStyle(fontSize: 20),
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // dialog page
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(DialogPage.id);
+                },
+                child: const Text(
+                  "Dialog and Drawer",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
               ),
-              textColor: Colors.white,
-              color: Colors.blueAccent,
-            ),
-            SizedBox(height: 20,),
-            MaterialButton(
-              shape: const StadiumBorder(),
-              height: 50,
-              minWidth: 250,
-              onPressed: () {
-                Navigator.of(context).pushNamed(SingleChildScrollPage.id);
-              },
-              child: const Text(
-                "SingleChildScrollView",
-                style: TextStyle(fontSize: 20),
+              SizedBox(
+                height: 20,
               ),
-              textColor: Colors.white,
-              color: Colors.blueAccent,
-            ),
-            SizedBox(height: 20,),
-            MaterialButton(
-              shape: const StadiumBorder(),
-              height: 50,
-              minWidth: 250,
-              onPressed: () {
-                Navigator.of(context).pushNamed(ListViewPage.id);
-              },
-              child: const Text(
-                "List View",
-                style: TextStyle(fontSize: 20),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SingleChildScrollPage.id);
+                },
+                child: const Text(
+                  "SingleChildScrollView",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
               ),
-              textColor: Colors.white,
-              color: Colors.blueAccent,
-            ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(ListViewPage.id);
+                },
+                child: const Text(
+                  "List View",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(ButtonsPage.id);
+                },
+                child: const Text(
+                  "Button Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
 
-          ],
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(GridViewPage.id);
+                },
+                child: const Text(
+                  "Grid View",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(PageViewPage.id);
+                },
+                child: const Text(
+                  "Page View",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(TabBarViewPage.id);
+                },
+                child: const Text(
+                  "Tab Bar View",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(ContainerPage.id);
+                },
+                child: const Text(
+                  "Container Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(InputPage.id);
+                },
+                child: const Text(
+                  "Input Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(TextFormPage.id);
+                },
+                child: const Text(
+                  "Text Form Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(FancyBottomBarPage.id);
+                },
+                child: const Text(
+                  "Fancy Bottom Bar Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SpeedDialPage.id);
+                },
+                child: const Text(
+                  "Speed Dial Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SliverAppBarPage.id);
+                },
+                child: const Text(
+                  "Sliver App Bar Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(NavigationRailPage.id);
+                },
+                child: const Text(
+                  "Navigation Rail Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MaterialButton(
+                shape: const StadiumBorder(),
+                height: 50,
+                minWidth: 250,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(AnimationPage.id);
+                },
+                child: const Text(
+                  "Animation Page",
+                  style: TextStyle(fontSize: 20),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueAccent,
+              ),
+            ],
+          ),
         ),
       ),
       drawer: Drawer(
@@ -165,8 +388,7 @@ class _HomePageState extends State<HomePage> {
               ),
               title: const Text(
                 "My Files",
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
             ListTile(
@@ -281,8 +503,7 @@ class _HomePageState extends State<HomePage> {
               ),
               title: const Text(
                 "Settings & account",
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ],

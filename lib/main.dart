@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mywidgecatalog_less6/pages/animations/animation_class.dart';
+import 'package:mywidgecatalog_less6/pages/animations/animation_page.dart';
 import 'package:mywidgecatalog_less6/pages/buttons_page.dart';
 import 'package:mywidgecatalog_less6/pages/container_page.dart';
 import 'package:mywidgecatalog_less6/pages/dialog_page.dart';
@@ -47,7 +49,8 @@ class MyApp extends StatelessWidget {
         SpeedDialPage.id: (context) => SpeedDialPage(),
         FancyBottomBarPage.id: (context) => FancyBottomBarPage(),
         SliverAppBarPage.id: (context) => SliverAppBarPage(),
-        NavigationRailPage.id: (context) => NavigationRailPage()
+        NavigationRailPage.id: (context) => NavigationRailPage(),
+        AnimationPage.id: (context) => AnimationPage(),
       },
     );
   }
